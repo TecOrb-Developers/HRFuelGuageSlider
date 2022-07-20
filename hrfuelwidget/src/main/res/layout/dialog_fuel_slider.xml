@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fg="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/bg_bottom_sheet"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Fuel Slider"
+            android:textSize="20sp"
+            android:textColor="#3A3C40"
+            android:fontFamily="sans-serif-black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.hrfuelwidget.HRFuelView
+            android:id="@+id/fuelView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/seekBar"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            fg:needleColor="#BF0006"
+            fg:textColor="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            fg:layout_constraintBottom_toBottomOf="@+id/fuelView"
+            fg:layout_constraintEnd_toEndOf="@+id/fuelView"
+            fg:layout_constraintStart_toStartOf="@+id/fuelView"
+            fg:layout_constraintTop_toTopOf="@+id/fuelView"
+            fg:srcCompat="@drawable/fuel_check" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:progressDrawable="@android:color/transparent"
+            android:thumb="@android:color/transparent"
+            android:thumbTint="@android:color/transparent"
+            android:textDirection="ltr"
+            android:layoutDirection="ltr"
+            fg:layout_constraintBottom_toBottomOf="@+id/fuelView"
+            fg:layout_constraintEnd_toEndOf="@+id/fuelView"
+            fg:layout_constraintStart_toStartOf="@+id/fuelView"
+            fg:layout_constraintTop_toTopOf="@+id/fuelView" />
+
+        <TextView
+            android:id="@+id/viewSearching"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fuel percentage: "
+            android:textColor="#3A3C40"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fuelView" />
+
+        <Button
+            android:id="@+id/viewBtnConnect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="0dp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text=""
+            android:visibility="invisible"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewSearching" />
+
+        <ImageView
+            android:id="@+id/viewClose"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="20dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/textView10"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textView10"
+            app:srcCompat="@drawable/cross" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

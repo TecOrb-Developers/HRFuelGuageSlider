@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HRFuel</string>
+    <string name="empty">E</string>
+    <string name="half">1/2</string>
+    <string name="full">F</string>
+
+</resources>

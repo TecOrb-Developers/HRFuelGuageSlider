@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="HRFuelView">
+        <attr name="level" format="float" />
+        <attr name="needleColor" format="color" />
+        <attr name="textColor" format="color" />
+        <attr name="lineColor" format="color" />
+        <attr name="labelColor" format="color" />
+        <attr name="emptyColor" format="color" />
+        <attr name="label" format="string" />
+    </declare-styleable>
+
+</resources>
