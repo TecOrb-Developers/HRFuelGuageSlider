@@ -16,25 +16,25 @@ public class HRFuelView extends View {
 
     private final static int TICK_STROKE_WIDTH_PX = 8;
 
-    private float mDensity;
+    private final float mDensity;
     private float mLevel;
 
-    private float mNumDegreesToShow;
-    private float mDegreesStart;
-    private float mDegreesEnd;
+    private final float mNumDegreesToShow;
+    private final float mDegreesStart;
+    private final float mDegreesEnd;
     private Point mNeedlePivot;
 
-    private Paint mPaint;
-    private Path mNeedlePath;
-    private int mNeedleColor;
+    private final Paint mPaint;
+    private final Path mNeedlePath;
+    private final int mNeedleColor;
     private int mLineColor;
-    private int mTextColor;
-    private int mLabelColor;
-    private int mEmptyColor;
-    private String mLabel;
+    private final int mTextColor;
+    private final int mLabelColor;
+    private final int mEmptyColor;
+    private final String mLabel;
 
-    private float mShortTickLength;
-    private float mLongTickLength;
+    private final float mShortTickLength;
+    private final float mLongTickLength;
     private float mTickStart;
 
     public HRFuelView(Context context, AttributeSet attrs) {
@@ -89,7 +89,7 @@ public class HRFuelView extends View {
         if (mNeedlePivot == null) {
             int height = getHeight();
             mNeedlePivot = new Point((height / 2), (height / 4) * 3);
-            mTickStart = (height / 2);
+            mTickStart = (float) (height / 2);
 
             mNeedlePath.reset();
             float needleBottom = mNeedlePivot.y + (10 * mDensity);
@@ -208,7 +208,7 @@ public class HRFuelView extends View {
         mPaint.setColor(mLabelColor);
         mPaint.setTextSize(mDensity * 12);
         float textWidth = mPaint.measureText(mLabel);
-        canvas.drawText(mLabel, (getWidth()/2) - (textWidth/2), getHeight()/2, mPaint);
+        canvas.drawText(mLabel, (float) (getWidth()/2) - (textWidth/2), (float) getHeight()/2, mPaint);
     }
 
     protected float constrain(float value, float min, float max) {

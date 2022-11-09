@@ -76,7 +76,6 @@ public class HRFuelSliderDialog extends BottomSheetDialogFragment implements Vie
 
     protected void handleSeekBarChanged(int progress) {
         float newLevel = (float) progress / 100f;
-        Log.d("fuel Reading ", "========> " + newLevel);
         binding.fuelView.setFuelLevel(newLevel);
         fuelReading = progress;
         if (callBack != null) {
